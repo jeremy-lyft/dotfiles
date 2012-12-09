@@ -1,3 +1,6 @@
+[User]
+	Name = Jeremy Pian
+	Email = jxp604@gmail.com
 [alias]
   st = status
 	ci = commit
