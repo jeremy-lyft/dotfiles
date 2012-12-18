@@ -4,6 +4,7 @@ call pathogen#infect()
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set shiftwidth=2
+set nobackup
 "set softtabstop=2
 "set expandtab
 set tabstop=2
