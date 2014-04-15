@@ -3,11 +3,13 @@ colorscheme ron
 call pathogen#infect()
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-set shiftwidth=2
 set noswapfile
-"set softtabstop=2
-"set expandtab
+
+set shiftwidth=2
+set softtabstop=2
 set tabstop=2
+
+set expandtab
 set textwidth=80
 set smartindent
 set autoindent
@@ -15,6 +17,8 @@ set incsearch hlsearch
 set number
 set pastetoggle=<F2>
 set colorcolumn=81
+
+set mouse=a
 
 set ruler                     " show the line number on the bar
 set more                      " use more prompt
@@ -26,8 +30,8 @@ set showmode
 set showcmd
 set nocompatible              " vim, not vi
 set smarttab                  " tab and backspace are smart
-set scrolloff=20              " keep at least 5 lines above/below
-set sidescrolloff=20          " keep at least 5 lines left/right
+set scrolloff=10              " keep at least 5 lines above/below
+set sidescrolloff=10          " keep at least 5 lines left/right
 set history=200
 "set backspace=indent,eol,start
 "set linebreak
@@ -61,11 +65,14 @@ map tl :tablast<CR>
 map tt :tabedit<Space>
 map tn :tabnext<Space>
 map tm :tabm<Space>
+map tc :tabclose<CR>
 map <CR> i<CR><Esc>l
 
 "press ctrl + c to copy in visual selection mode (hence vmap)
 vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
 "press ctrl + v to paste in normal mode (hence nmap)
 "nmap <C-V> :call setreg("\"",system("pbpaste"))<CR>p
+"Press ctrl + g in normal mode to copy the file name into buffer
+nnoremap <C-g> :call system("pbcopy", getreg("%"))<CR>
 
 ab ipdb import ipdb; ipdb.set_trace()
