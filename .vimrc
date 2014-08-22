@@ -3,7 +3,10 @@ colorscheme ron
 call pathogen#infect()
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_max_files = 50000
+
 set noswapfile
+set laststatus=2
 
 set shiftwidth=2
 set softtabstop=2
