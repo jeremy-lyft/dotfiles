@@ -5,8 +5,13 @@
 	co = checkout
 	di = diff
 	lg = log -p
+  pu = pull --rebase upstream master
 [user]
 	name = Jeremy Pian
-	email = jxp604@gmail.com
+	email = jeremy@minted.com
 [github]
 	user = jxp604
+[push]
+	default = simple
+[log]
+	date = local
