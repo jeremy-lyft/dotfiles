@@ -15,3 +15,5 @@
 	default = simple
 [log]
 	date = local
+[credential]
+	helper = osxkeychain

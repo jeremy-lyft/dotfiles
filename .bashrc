@@ -1,13 +1,20 @@
-cd ~/pg/yelp-main
-alias environ=". ~/.pgconf-$USER/environ.sh"
-
-# 2012-05-14 from juliank
-function fix_ssh_agent_tmux() {
-	if [[ -n $TMUX ]]; then
-		NEW_SSH_AUTH_SOCK=`tmux showenv|grep ^SSH_AUTH_SOCK|cut -d = -f 2`
-		if [[ -n $NEW_SSH_AUTH_SOCK ]] && [[ -S $NEW_SSH_AUTH_SOCK ]]; then
-			SSH_AUTH_SOCK=$NEW_SSH_AUTH_SOCK
-		fi
-	fi
-}
-export PROMPT_COMMAND="fix_ssh_agent_tmux"
+########################
+#CUSTOMIZABLE FIELDS####
+########################
+export CLICOLOR=1
+export LSCOLORS=Bxgxfxfxcxdxdxhbadbxbx
+##
+#DIR
+#SYM_LINK
+#SOCKET
+#PIPE
+#EXE
+#BLOCK_SP
+#CHAR_SP
+#EXE_SUID
+#EXE_GUID
+#DIR_STICKY
+#DIR_WO_STICKY
+##
+export PS1="\[\e[0;31m\]\u\[\e[m\]@\[\e[0;32m\]\W\[\e[m\] $ "
+export PATH=/usr/local/bin:$PATH

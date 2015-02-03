@@ -5,6 +5,9 @@ call pathogen#infect()
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_max_files = 50000
 
+set runtimepath^=~/.vim/ftplugin/html.vim
+runtime! ftplugin/html.vim
+
 set noswapfile
 set laststatus=2
 
@@ -13,7 +16,7 @@ set softtabstop=2
 set tabstop=2
 
 set expandtab
-set textwidth=80
+set textwidth=10000
 set smartindent
 set autoindent
 set incsearch hlsearch
