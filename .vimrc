@@ -29,6 +29,7 @@ au BufEnter *.php set colorcolumn=101
 
 set mouse=a
 
+set backspace=indent,eol,start
 set ruler                     " show the line number on the bar
 set more                      " use more prompt
 set autoread                  " watch for file changes
