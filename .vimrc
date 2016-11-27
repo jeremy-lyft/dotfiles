@@ -11,18 +11,21 @@ runtime! ftplugin/html.vim
 set noswapfile
 set laststatus=2
 
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
-
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set expandtab
+set smarttab
+
 set textwidth=10000
 set smartindent
 set autoindent
 set incsearch hlsearch
 set number
 set pastetoggle=<F2>
-set colorcolumn=81
+set colorcolumn=101
+au BufEnter *.py set colorcolumn=121
+au BufEnter *.php set colorcolumn=101
 
 set mouse=a
 
@@ -35,32 +38,11 @@ set lazyredraw                " don't redraw when don't have to
 set showmode
 set showcmd
 set nocompatible              " vim, not vi
-set smarttab                  " tab and backspace are smart
 set scrolloff=10              " keep at least 5 lines above/below
 set sidescrolloff=10          " keep at least 5 lines left/right
 set history=200
-"set backspace=indent,eol,start
-"set linebreak
-"set cmdheight=1               " command line two lines high
-"set undolevels=1000           " 1000 undos
-"set updatecount=100           " switch every 100 chars
-"set complete=.,w,b,u,U,t,i,d  " do lots of scanning on tab completion
-"set ttyfast                   " we have a fast terminal
-"set noerrorbells              " No error bells please
-"set shell=bash
-"set fileformats=unix
-"set ff=unix
-"filetype on                   " Enable filetype detection
-"filetype indent on            " Enable filetype-specific indenting
-"filetype plugin on            " Enable filetype-specific plugins
-"set wildmode=longest:full
-"set wildmenu                  " menu has tab completion
-"let maplocalleader=','        " all my macros start with ,
-"set laststatus=2
-
 
 autocmd BufWritePre * :%s/\s\+$//e
-"autocmd vimenter * NERDTree
 
 syntax on
 
@@ -80,5 +62,3 @@ vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
 "nmap <C-V> :call setreg("\"",system("pbpaste"))<CR>p
 "Press ctrl + g in normal mode to copy the file name into buffer
 nnoremap <C-g> :call system("pbcopy", getreg("%"))<CR>
-
-ab ipdb import ipdb; ipdb.set_trace()
