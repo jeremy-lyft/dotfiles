@@ -8,9 +8,9 @@
   pu = pull --rebase upstream master
 [user]
 	name = Jeremy Pian
-	email = jeremy@minted.com
+	email = jeremy.pian@doordash.com
 [github]
-	user = jxp604
+	user = jeremypian
 [push]
 	default = simple
 [log]
